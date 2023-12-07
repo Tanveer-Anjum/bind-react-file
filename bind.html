@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>old react (bind)</title>
+</head>
+<body>
+    <button class="btn">click</button>
+    
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = "React";
+            this.server = "https://localhost:3000";
+         //when use bind we can access all the function of react;
+            document.querySelector(".btn").addEventListener("click",this.clickhandle.bind(this));// bind are us to bind all the function of previous "react"
+        }
+        clickhandle(){
+
+            console.log("button clicked")
+           // console.log(this.clickhandle)
+           //we want only server access 
+           console.log(this.server)
+
+        }
+    }
+
+    const app = new React();
+</script>
+</html>
